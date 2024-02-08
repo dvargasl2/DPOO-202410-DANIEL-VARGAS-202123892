@@ -42,16 +42,19 @@ public class SandboxArreglos
      */
     public int[] getCopiaEnteros( )
     {
-        return null;
+    	int[] copiaEnteros = arregloEnteros;
+        return copiaEnteros;
     }
 
     /**
      * Retorna una copia del arreglo de cadenas, es decir un nuevo arreglo del mismo tamaño que contiene copias de los valores del arreglo original
      * @return Una copia del arreglo de cadenas
      */
+    
     public String[] getCopiaCadenas( )
     {
-        return null;
+    	String[] copiaCadenas = arregloCadenas;
+        return copiaCadenas;
     }
 
     /**
@@ -60,7 +63,9 @@ public class SandboxArreglos
      */
     public int getCantidadEnteros( )
     {
-        return -1;
+    	int cantidad;
+    	cantidad = arregloEnteros.length;
+    	return cantidad;
     }
 
     /**
@@ -69,7 +74,9 @@ public class SandboxArreglos
      */
     public int getCantidadCadenas( )
     {
-        return -1;
+    	int cantidad;
+    	cantidad = arregloCadenas.length;
+    	return cantidad;
     }
 
     /**
