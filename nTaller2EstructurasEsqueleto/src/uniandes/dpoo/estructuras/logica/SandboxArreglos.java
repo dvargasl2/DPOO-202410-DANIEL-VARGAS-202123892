@@ -1,5 +1,6 @@
 package uniandes.dpoo.estructuras.logica;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 /**
@@ -42,8 +43,8 @@ public class SandboxArreglos
      */
     public int[] getCopiaEnteros( )
     {
-    	int[] copiaEnteros = arregloEnteros;
-        return copiaEnteros;
+    	int listanueva[] = Arrays.copyOf(arregloEnteros, arregloEnteros.length);
+    	return listanueva;
     }
 
     /**
@@ -53,8 +54,8 @@ public class SandboxArreglos
     
     public String[] getCopiaCadenas( )
     {
-    	String[] copiaCadenas = arregloCadenas;
-        return copiaCadenas;
+    	String listanueva[] = Arrays.copyOf(arregloCadenas, arregloCadenas.length);
+    	return listanueva;
     }
 
     /**
@@ -86,7 +87,13 @@ public class SandboxArreglos
      */
     public void agregarEntero( int entero )
     {
-
+    	int listaEnteros[] = new int [arregloEnteros.length + 1];
+    	for (int i = 0; i < arregloEnteros.length; i++)
+    	{
+    		listaEnteros[i] = arregloEnteros[i];
+    	}
+    	listaEnteros[arregloEnteros.length] = entero;
+    	arregloEnteros = listaEnteros;
     }
 
     /**
@@ -96,7 +103,13 @@ public class SandboxArreglos
      */
     public void agregarCadena( String cadena )
     {
-
+    	String[] listaCadenas = new String [arregloCadenas.length + 1];
+    	for (int i = 0; i < arregloCadenas.length; i++)
+    	{
+    		listaCadenas[i] = arregloCadenas[i];
+    	}
+    	listaCadenas[arregloCadenas.length] = cadena;
+    	arregloCadenas = listaCadenas;
     }
 
     /**
@@ -105,7 +118,23 @@ public class SandboxArreglos
      */
     public void eliminarEntero( int valor )
     {
-
+    	int cantidad = 0;
+    	for (int i = 0; i < arregloEnteros.length; i++)
+    	{
+    		if (arregloEnteros[i] == valor)
+    			{
+    				cantidad++;
+    			}
+    	}
+    	int listaEnteros[] = new int [arregloEnteros.length - cantidad];
+    	for (int i = 0; i < arregloEnteros.length; i++)
+    	{
+    		if (arregloEnteros[i] != valor)
+    		{
+    			listaEnteros[i] = arregloEnteros[i];
+    		}
+    	arregloEnteros = listaEnteros;
+    	}
     }
 
     /**
@@ -114,7 +143,23 @@ public class SandboxArreglos
      */
     public void eliminarCadena( String cadena )
     {
-
+    	int cantidad = 0;
+    	for (int i = 0; i < arregloCadenas.length; i++)
+    	{
+    		if (arregloCadenas[i] == cadena)
+    			{
+    				cantidad++;
+    			}
+    	}
+    	String listaCadenas[] = new String [arregloCadenas.length - cantidad];
+    	for (int i = 0; i < arregloCadenas.length; i++)
+    	{
+    		if (arregloCadenas[i] != cadena)
+    		{
+    			listaCadenas[i] = arregloCadenas[i];
+    		}
+    	arregloCadenas = listaCadenas;
+    	}
     }
 
     /**
@@ -126,7 +171,8 @@ public class SandboxArreglos
      */
     public void insertarEntero( int entero, int posicion )
     {
-
+    	int listanueva[] = Arrays.copyOf(arregloEnteros, arregloEnteros.length + 1);
+    	
     }
 
     /**
