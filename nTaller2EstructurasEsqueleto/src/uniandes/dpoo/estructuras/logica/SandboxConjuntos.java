@@ -48,6 +48,9 @@ public class SandboxConjuntos
      */
     public List<String> getCadenasComoListaInvertida( )
     {
+    	String[] arreglo = new String[arbolCadenas.size()];
+    	int i = 0;
+    	
         return null;
     }
 
